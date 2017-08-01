@@ -24,7 +24,7 @@ while n < MAX_PAGES
 
 	http = Net::HTTP.new(url.host, url.port)
 	http.use_ssl = true
-	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+	http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
 	request = Net::HTTP::Get.new(url) 
 	request["authorization"] = ''
